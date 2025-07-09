@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "com.unity.inputsystem": "1.5.1",
+    "com.unity.cinemachine": "2.8.4"
+  }
+}
