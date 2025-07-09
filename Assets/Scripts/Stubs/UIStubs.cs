@@ -1,5 +1,6 @@
 using UnityEngine;
 
+#if !UNITY_5_3_OR_NEWER
 namespace UnityEngine.UI
 {
     public class Canvas : MonoBehaviour
@@ -20,7 +21,7 @@ namespace UnityEngine.UI
         public string text;
         public Font font;
         public TextAnchor alignment;
-        public bool enabled;
+        public new bool enabled;
     }
 
     public class Slider : MonoBehaviour
@@ -28,3 +29,4 @@ namespace UnityEngine.UI
         public float value;
     }
 }
+#endif

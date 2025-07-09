@@ -1,3 +1,4 @@
+#if !UNITY_5_3_OR_NEWER
 namespace UnityEngine.InputSystem
 {
     public class InputAction
@@ -27,3 +28,4 @@ namespace UnityEngine.InputSystem
         }
     }
 }
+#endif

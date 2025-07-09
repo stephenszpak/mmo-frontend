@@ -1,5 +1,6 @@
 using UnityEngine;
 
+#if !UNITY_5_3_OR_NEWER
 namespace Cinemachine
 {
     public class CinemachineVirtualCamera : MonoBehaviour
@@ -7,3 +8,4 @@ namespace Cinemachine
         public Transform Follow { get; set; }
     }
 }
+#endif
