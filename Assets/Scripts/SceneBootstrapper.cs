@@ -70,7 +70,7 @@ public static class SceneBootstrapper
         GameObject textObj = new GameObject("Name");
         textObj.transform.SetParent(panel.transform);
         var nameText = textObj.AddComponent<Text>();
-        nameText.font = Resources.GetBuiltinResource<Font>("Arial.ttf");
+        nameText.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
         nameText.alignment = TextAnchor.MiddleCenter;
         var nameRect = nameText.GetComponent<RectTransform>();
         nameRect.anchorMin = new Vector2(0f, 0.5f);
