@@ -31,4 +31,5 @@ Assets/
 5. Press **Tab** to cycle targets. Selected targets display their name and a placeholder HP bar at the top of the screen.
 
 All scene objects are created at runtime by `SceneBootstrapper` for simplicity.
+See `Docs/CharacterSetup.md` for details on structuring the player prefab and camera hierarchy.
 
