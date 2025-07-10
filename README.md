@@ -15,6 +15,8 @@ Assets/
     Player/
       PlayerController.cs
       Targeting.cs
+    Camera/
+      ThirdPersonCamera.cs
     UI/
       TargetUI.cs
   SceneBootstrapper.cs
