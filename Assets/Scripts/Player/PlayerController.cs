@@ -40,6 +40,19 @@ public class PlayerController : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         network = GetComponent<DummyNetworkManager>();
+
+        // Hide the capsule mesh and remove the primitive collider if present
+        var meshRenderer = GetComponent<MeshRenderer>();
+        if (meshRenderer != null)
+        {
+            meshRenderer.enabled = false;
+        }
+
+        var primitiveCollider = GetComponent<CapsuleCollider>();
+        if (primitiveCollider != null)
+        {
+            Destroy(primitiveCollider);
+        }
         
         var map = new InputActionMap("Player");
         moveAction = map.AddAction("Move", binding: "<Gamepad>/leftStick");
