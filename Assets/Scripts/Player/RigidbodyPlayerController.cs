@@ -66,10 +66,10 @@ public class RigidbodyPlayerController : MonoBehaviour
         Vector3 desiredVelocity = inputDir * moveSpeed;
 
         float accelRate = input.sqrMagnitude > 0f ? acceleration : deceleration;
-        Vector3 horizVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+        Vector3 horizVel = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
         horizVel = Vector3.MoveTowards(horizVel, desiredVelocity, accelRate * Time.fixedDeltaTime);
 
-        rb.velocity = new Vector3(horizVel.x, rb.velocity.y, horizVel.z);
+        rb.linearVelocity = new Vector3(horizVel.x, rb.linearVelocity.y, horizVel.z);
 
         if (rotateTowardMovement && input.sqrMagnitude > 0.001f)
         {
